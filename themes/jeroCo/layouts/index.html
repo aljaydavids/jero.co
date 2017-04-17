@@ -1,0 +1,20 @@
+{{ partial "header.html" . }}
+
+<section class="content content--intro">
+  <h1 class="hero-heading">
+    <span class="hero-heading__super">Jero...</span> A Designer &amp; Developer who loves <span class="interest-shown">Learning new things</span>
+  </h1>
+  <div class="interests">
+  	{{ range $.Site.Data.interests.interests }}
+  	<span class="interest interest--{{ .id }}">{{ .name }}</span>
+  	{{ end }}
+  	{{ range $.Site.Data.interests.interests }}
+  	<span class="interest interest--{{ .id }}">{{ .name }}</span>
+  	{{ end }}
+  	{{ range $.Site.Data.interests.interests }}
+  	<span class="interest interest--{{ .id }}">{{ .name }}</span>
+  	{{ end }}
+  </div>
+</section>
+
+{{ partial "footer.html" . }}

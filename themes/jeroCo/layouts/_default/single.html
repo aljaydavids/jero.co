@@ -1,0 +1,15 @@
+{{ partial "header.html" . }}
+
+<section class="content{{ with $.Params.fullScreenHeading }} content--intro{{ end }}">
+	<h1 class="hero-heading">
+		{{ .Title }}
+		{{ with $.Params.fullScreenSubHeading }}
+		<small class="hero-heading__small">{{ $.Params.subheading }}</small>
+		{{ end }}
+	</h1>
+</section>
+<section class="content__reading">
+	{{ .Content }}
+</section>
+
+{{ partial "footer.html" . }}

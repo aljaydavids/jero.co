@@ -1,0 +1,12 @@
+<h1 class="hero-heading">Jero is a Designer from South Africa, living in Amsterdam</h1>
+<div class="interests">
+	{{ range $.Site.Data.interests.interests }}
+	<span class="interest{{ with .favourite }} interest--fav{{ end }}">{{ .name }}</span>
+	{{ end }}
+	{{ range $.Site.Data.interests.interests }}
+	<span class="interest{{ with .favourite }} interest--fav{{ end }}">{{ .name }}</span>
+	{{ end }}
+	{{ range $.Site.Data.interests.interests }}
+	<span class="interest{{ with .favourite }} interest--fav{{ end }}">{{ .name }}</span>
+	{{ end }}
+</div>

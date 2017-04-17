@@ -1,0 +1,12 @@
+<section class="nav">
+
+	<nav class="nav__menu">
+		<a href="/" class="nav__item nav__item--active">Home</a>
+		<a href="/about" class="nav__item">About</a>
+	</nav>
+	<nav class="nav__menu--social">
+		{{ range $.Site.Data.social.social }}
+		<a href="{{ .url }}" class="nav__item">{{ .name }}</a>
+		{{ end }}
+	</nav>
+</section>
