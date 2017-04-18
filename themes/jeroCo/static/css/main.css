@@ -36,6 +36,10 @@ h1, h2, h3, h4, h5 {
 	}
 }
 
+.logo {
+	height: 24px;
+}
+
 .copyright {
 	font-family: sans-serif;
 	font-size: 0.6em;
@@ -125,7 +129,7 @@ h1, h2, h3, h4, h5 {
 .nav__item:after {
 	content: '';
 	display: block;
-	border-bottom: 1px solid red;
+	border-bottom: 2px solid red;
 	width: 100%;
 	opacity: 0;
 }
@@ -133,6 +137,10 @@ h1, h2, h3, h4, h5 {
 .nav__item--active:after,
 .nav__item:hover:after {
 	opacity: 1;
+}
+
+.nav__item--home:hover:after {
+	opacity: 0;
 }
 
 .interests {
@@ -145,8 +153,7 @@ h1, h2, h3, h4, h5 {
     text-align: center;
     z-index: 0;
     line-height: 1.2;
-    word-break: break-word;
-    word-wrap: break-word;
+    word-break: break-all;
 }
 
 .interests::selection {
@@ -158,7 +165,10 @@ h1, h2, h3, h4, h5 {
 }
 
 .interest {
+	display: inline-block;
+	white-space: nowrap;
 	opacity: 0.015;
+	transition: opacity 1.2s ease-in;
 }
 
 @media (min-width: 360px) {
@@ -178,16 +188,18 @@ h1, h2, h3, h4, h5 {
 
 .hero-heading {
 	font-size: 2em;
-	margin: 0 16px;
+	margin: 0 24px;
 	position: relative;
 	z-index: 1;
 	margin-top: -80px;
 	text-align: left;
+	line-height: 1;
 }
 
 @media (min-width: 360px) {
 	.hero-heading {
 		font-size: 3em;
+		margin: 0 16px;
 		max-width: 600px;
 	}
 }
@@ -195,6 +207,9 @@ h1, h2, h3, h4, h5 {
 	display: block;
 	font-size: 2.0834em;
 	font-weight: 800;
+}
+
+.hero-heading__secondary {
 }
 
 .hero-heading__small {

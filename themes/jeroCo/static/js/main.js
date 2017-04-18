@@ -22,7 +22,7 @@ var Q = {
 
 	hasClass: function(el, className) {
 		if (el.classList)
-			return el.classList.contains(className);
+			return el.classList.contains(className.trim());
 		else
 			return new RegExp('(^| )' + className + '( |$)', 'gi').test(el.className);
 	},
@@ -53,23 +53,32 @@ var Q = {
 
 Q.ready(function() {
 	var interestsParent = Q.getElement('.interests');
-	var interestShown = Q.getElement('.interest-shown');
+	// var interestShown = Q.getElement('.interest-shown');
+	shuffleInterests();
 	var interests = interestsParent.children;
 	var randomInterest = false;
 	window.setInterval(function() {
 		randomInterest = Q.random(interests);
-		interestShown.textContent = randomInterest.textContent;
+		// interestShown.textContent = randomInterest.textContent;
 		// console.log(randomInterest);
 		highlightInterest(randomInterest, interestsParent);
-	}, 3000);
-})
+	}, 2600);
+});
+
+function shuffleInterests() {
+	var interestsParent = Q.getElement('.interests');
+	for (var i = interestsParent.children.length; i >= 0; i--) {
+	    interestsParent.appendChild(interestsParent.children[Math.random() * i | 0]);
+	}
+}
+
 
 function highlightInterest(interest, interestsParent) {
 	//find chosen interest spans
 	var children = interestsParent.children;
 	var chosenSpans = [];
 	var dirtySpans = [];
-	var chosenSpanCleaned = interest.className.replace('interest ','');
+	var chosenSpanCleaned = interest.className.replace('interest ','').replace('interest--active','');
 
 	Array.prototype.forEach.call(children, function(el, i){
 		//Find all the spans with class interest--active
