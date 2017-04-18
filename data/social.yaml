@@ -1,9 +1,13 @@
 social:
   - name: "Twitter"
+    id: "link-twitter-profile"
     url: "https://www.twitter.com/aljaydavids"
   - name: "Behance"
+    id: "link-behance-profile"
     url: "https://www.behance.net/aljaydavids"
   - name: "Github"
+    id: "link-github-profile"
     url: "https://www.github.com/aljaydavids"
   - name: "LinkedIn"
+    id: "link-linkedin-profile"
     url: "https://www.linkedin.com/in/aljerreaudavids"

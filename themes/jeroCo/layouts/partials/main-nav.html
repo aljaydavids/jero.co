@@ -7,7 +7,7 @@
 	</nav>
 	<nav class="nav__menu--social">
 		{{ range $.Site.Data.social.social }}
-		<a href="{{ .url }}" class="nav__item">{{ .name }}</a>
+		<a href="{{ .url }}" id="{{ .id }}" class="nav__item" target="_blank">{{ .name }}</a>
 		{{ end }}
 	</nav>
 </section>

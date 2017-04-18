@@ -1,5 +1,5 @@
-baseURL = "http://example.org/"
+baseURL = "http://jero.co"
 languageCode = "en-us"
-title = "My New Hugo Site"
+title = "Personal site of Designer & Developer Al-jerreau Davids | Jero.co"
 googleAnalytics = "UA-123-45"
 theme = "jeroCo"

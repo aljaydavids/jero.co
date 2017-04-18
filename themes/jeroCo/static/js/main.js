@@ -63,6 +63,27 @@ Q.ready(function() {
 		// console.log(randomInterest);
 		highlightInterest(randomInterest, interestsParent);
 	}, 2600);
+
+	//track events
+	Q.getElement('#link-twitter-profile').addEventListener('click', function() {
+        ga('send', 'event', 'social', 'click', 'view twitter profile');
+    }, false);
+
+    Q.getElement('#link-linkedin-profile').addEventListener('click', function() {
+        ga('send', 'event', 'social', 'click', 'view linkedIn profile');
+    }, false);
+
+    Q.getElement('#link-behance-profile').addEventListener('click', function() {
+        ga('send', 'event', 'social', 'click', 'view behance profile');
+    }, false);
+
+    Q.getElement('#link-github-profile').addEventListener('click', function() {
+        ga('send', 'event', 'social', 'click', 'view github profile');
+    }, false);
+
+    Q.getElement('.logo').addEventListener('click', function() {
+        ga('send', 'event', 'external', 'click', 'click logo');
+    }, false);
 });
 
 function shuffleInterests() {

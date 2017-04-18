@@ -2,17 +2,21 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://example.org/categories/</loc>
+    <loc>http://jero.co/home/</loc>
+  </url>
+  
+  <url>
+    <loc>http://jero.co/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://example.org/</loc>
+    <loc>http://jero.co/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://example.org/tags/</loc>
+    <loc>http://jero.co/tags/</loc>
     <priority>0</priority>
   </url>
   
